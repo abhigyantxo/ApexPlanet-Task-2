@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">TaskFlow<span>.</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#tasks">My Tasks</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">PLAN BETTER. DO BETTER.</p>
+                <h1>Make space for<br>what <span>matters.</span></h1>
+                <p class="hero-description">
+                    Organize your day, stay focused, and turn your goals
+                    into meaningful progress.
+                </p>
+                <a href="#tasks" class="primary-button">Explore Tasks ↗️</a>
+            </div>
+
+            <div class="hero-card">
+                <p class="card-label">YOUR DAILY FOCUS</p>
+                <div class="focus-circle">01</div>
+                <h2>One step at a time.</h2>
+                <p>Small actions. Consistent progress.</p>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <section class="panel" id="contact">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2>Get in touch.</h2>
+                <p class="section-description">
+                    Have a question or an idea? Send us a message.
+                </p>
+
+                <form id="contactForm" novalidate>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your full name" required>
+
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"
+                              placeholder="How can we help?" required></textarea>
+
+                    <button type="submit" class="primary-button">
+                        Send Message →
+                    </button>
+                    <p id="formFeedback" class="feedback" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section class="panel tasks-panel" id="tasks">
+                <p class="eyebrow">STAY ORGANIZED</p>
+                <h2>Your task list.</h2>
+                <p class="section-description">
+                    Capture your priorities and keep moving forward.
+                </p>
+
+                <form id="taskForm" class="task-form">
+                    <label for="taskInput">Add a task</label>
+                    <div class="task-input-row">
+                        <input type="text" id="taskInput"
+                               placeholder="What needs to get done?"
+                               required>
+                        <button type="submit" class="primary-button">Add</button>
+                    </div>
+                </form>
+
+                <div class="task-summary">
+                    <span id="taskCount">0 tasks</span>
+                    <span>YOUR PRIORITIES</span>
+                </div>
+
+                <ul id="taskList" class="task-list"></ul>
+                <p id="emptyMessage" class="empty-message">
+                    Your list is clear. Add your first task.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">TaskFlow<span>.</span></a>
+        <p>Designed for focus. Built for progress.</p>
+    </footer>
+</body>
+</html>
